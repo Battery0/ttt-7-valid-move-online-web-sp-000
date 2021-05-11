@@ -1,4 +1,5 @@
 # code your #valid_move? method here
+#valid_move? - uses the helper method #position_taken to ensure the position on the board hasn't been played yet and also ensures a valid space on the board is actually played between spaces 1 - 9 (this is actually 0 - 8 because the array index is 1 less as it starts at 0).
 def valid_move?(board, index)
   if position_taken?(board, index) == false && index.between?(0, 8)
     true
